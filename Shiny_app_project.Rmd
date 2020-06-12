@@ -1,0 +1,35 @@
+---
+title: "Shiny App and Reproducable pitch"
+author: "Sakshi"
+date: "12/06/2020"
+output: ioslides_presentation
+---
+
+## Project Goal
+
+This peer assessed assignment has two parts.First, you will create a Shiny application and deploy it on Rstudio's servers.Second, you will use Slidify or Rstudio Presenter to prepare a reproducible pitch presentation about your application.
+
+## Steps to perform
+
+1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
+2. Deploy the application on Rstudio's shiny server
+3. Share the application link by pasting it into the provided text box
+4. Share your server.R and ui.R code on github
+
+## How to use the Application
+
+Using the data provided by UsingR library for father and son height, we fit a linear model to predict a son's height based on the father's average height.
+
+The application is running on (https://mangalsakshi.shinyapps.io/FinalProject/)
+
+ui.R, and Server.R Code in my github repository (https://github.com/sakshimangal/reproducible-pitch)
+
+## Plot
+```{r, echo=FALSE, eval=TRUE, message=FALSE, warning=FALSE, comment=""}
+library(UsingR)
+dat <- father.son
+plot(dat$fheight, dat$sheight, col = alpha("steelblue3", 0.5), pch = 19, xlab = "Father's height",
+     ylab = "Son's height")
+abline(lm(dat$sheight ~ dat$fheight))
+```
+
